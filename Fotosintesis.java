@@ -1,16 +1,16 @@
-interface Fotosintesis {
-    void lakukanFotosintesis();
+abstract class Fotosintesis {
+    abstract void lakukanFotosintesis();
 }
 
-interface Respirasi {
-    void lakukanRespirasi();
+abstract class Respirasi {
+    abstract void lakukanRespirasi();
 }
 
-interface Reproduksi {
-    void berkembangBiak();
+abstract class Reproduksi {
+    abstract void berkembangBiak();
 }
 
-class BungaMatahari extends Bunga implements Fotosintesis, Reproduksi {
+class BungaMatahari extends Bunga{
     public BungaMatahari(String nama, String habitat, String warna) {
         super(nama, habitat, warna);
     }
@@ -26,7 +26,7 @@ class BungaMatahari extends Bunga implements Fotosintesis, Reproduksi {
     }
 }
 
-class PohonMangga extends Pohon implements Fotosintesis, Respirasi, Reproduksi {
+class PohonMangga extends Pohon{
     public PohonMangga(String nama, String habitat, double tinggi) {
         super(nama, habitat, tinggi);
     }
@@ -47,7 +47,7 @@ class PohonMangga extends Pohon implements Fotosintesis, Respirasi, Reproduksi {
     }
 }
 
-class PakuRakit extends Paku implements Fotosintesis, Reproduksi {
+class PakuRakit extends Paku{
     public PakuRakit(String nama, String habitat, String tipeSpora) {
         super(nama, habitat, tipeSpora);
     }
@@ -63,7 +63,7 @@ class PakuRakit extends Paku implements Fotosintesis, Reproduksi {
     }
 }
 
-class KaktusBarel extends Kaktus implements Respirasi, Reproduksi {
+class KaktusBarel extends Kaktus{
     public KaktusBarel(String nama, String habitat, String jenisDuri) {
         super(nama, habitat, jenisDuri);
     }
@@ -79,7 +79,7 @@ class KaktusBarel extends Kaktus implements Respirasi, Reproduksi {
     }
 }
 
-class LumutTanduk extends Lumut implements Fotosintesis, Respirasi, Reproduksi {
+class LumutTanduk extends Lumut{
     public LumutTanduk(String nama, String habitat, double lajuPertumbuhan) {
         super(nama, habitat, lajuPertumbuhan);
     }
